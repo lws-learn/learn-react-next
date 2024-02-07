@@ -1,10 +1,30 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import RefLearn from './ref/RefLearn';
+import Layout from './layout/Layout';
+import App from './App';
+
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <Layout />,
+		children: [
+			{
+				path: '/',
+				element: <App />,
+			},
+			{
+				path: '/ref',
+				element: <RefLearn />,
+			},
+		],
+	},
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
+);
