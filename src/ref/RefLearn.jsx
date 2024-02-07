@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import RenderTest from './RenderTest';
 import StopWatch from './StopWatch';
+import FixBrokenChartInput from './FixBrokenChartInput';
 
 function RefLearn() {
 	const [r, setR] = useState();
@@ -18,8 +19,10 @@ function RefLearn() {
 			<RenderTest count={r} />
 			<br />
 			<h1>Stop Watch</h1>
-
 			<StopWatch />
+			<br />
+			<h1>Fix Broken Chart Input</h1>
+			<FixBrokenChartInput />
 		</div>
 	);
 }

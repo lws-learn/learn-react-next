@@ -10,7 +10,7 @@ function StopWatch() {
 		setStartTime(Date.now());
 		setCountTime(Date.now());
 
-		// clearInterval(current);
+		clearInterval(intervalRef.current);
 
 		intervalRef.current = setInterval(() => {
 			setCountTime(Date.now());
@@ -27,11 +27,17 @@ function StopWatch() {
 		clearInterval(intervalRef.current);
 	};
 
+	const handleClearTime = () => {
+		setCountTime(null);
+		setStartTime(null);
+		handleStopWatch();
+	};
 	return (
 		<div>
-			<h1>time passed : {timePass.toFixed(3)}</h1>
+			<h1>Time passed : {timePass.toFixed(3)}</h1>
 			<button onClick={handleClock}>Start</button>
 			<button onClick={handleStopWatch}>Stop</button>
+			<button onClick={handleClearTime}>Clear Time</button>
 		</div>
 	);
 }
