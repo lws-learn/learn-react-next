@@ -2,6 +2,9 @@ import { useRef, useState } from 'react';
 import RenderTest from './RenderTest';
 import StopWatch from './StopWatch';
 import FixBrokenChartInput from './FixBrokenChartInput';
+import OnOffToggleProblem from './OnOffToggleProblem';
+import DebounceIng from './DebounceIng';
+import TextChangeAfterSend from './TextChangeAfterSend';
 
 function RefLearn() {
 	const [r, setR] = useState();
@@ -23,6 +26,15 @@ function RefLearn() {
 			<br />
 			<h1>Fix Broken Chart Input</h1>
 			<FixBrokenChartInput />
+			<br />
+			<h1>Fix On Off Toggle Problem</h1>
+			<OnOffToggleProblem />
+			<br />
+			<h1>Debouncing solve</h1>
+			<DebounceIng />
+			<br />
+			<h1>Changing text after send button text</h1>
+			<TextChangeAfterSend />
 		</div>
 	);
 }
