@@ -8,6 +8,10 @@ const linksList = [
 		name: 'Ref',
 		to: '/ref',
 	},
+	{
+		name: 'Reducer',
+		to: '/reducer',
+	},
 ];
 function Layout() {
 	return (

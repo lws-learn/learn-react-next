@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RefLearn from './ref/RefLearn';
 import Layout from './layout/Layout';
 import App from './App';
+import ReducerPage from './reducer/ReducerPage';
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
 			{
 				path: '/ref',
 				element: <RefLearn />,
+			},
+			{
+				path: '/reducer',
+				element: <ReducerPage />,
 			},
 		],
 	},
